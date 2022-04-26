@@ -9,6 +9,7 @@ function Header() {
   return (
     <header>
       {APP_NAME}
+
       <DatePicker
         label="Pick a day"
         onChange={() => {}}
