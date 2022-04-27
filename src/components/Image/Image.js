@@ -1,3 +1,4 @@
+import { CardMedia } from "@mui/material";
 
 export default Image;
 
@@ -7,6 +8,10 @@ function Image({ alt, src }) {
   }
 
   return (
-    <img alt={alt} src={src} />
+    <CardMedia
+      component="img"
+      alt={alt}
+      image={src}
+    />
   );
 }

@@ -11,7 +11,7 @@ export default Header;
 
 function Header() {
   return (
-    <AppBar color='transparent' position='sticky'>
+    <AppBar color="default" position='sticky'>
       <Toolbar>
         <Typography variant='h6' sx={{ flexGrow: 1 }}>{APP_NAME}</Typography>
         <DatePicker

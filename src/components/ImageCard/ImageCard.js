@@ -1,3 +1,4 @@
+import { Box, Card, Grid } from '@mui/material';
 import Image from '../Image';
 import ImageDetails from '../ImageDetails';
 
@@ -17,9 +18,17 @@ function ImageCard({ media }) {
   } = media;
 
   return (
-    <main>
-      <Image alt={title} src={url} />
-      <ImageDetails body={explanation} timestamp={date} title={title} />
-    </main>
+    <Box maxWidth={920} mx="auto" p={4}>
+      <Card>
+        <Grid container>
+          <Grid item md={6} display="flex" alignItems="center">
+            <Image alt={title} src={url} />
+          </Grid>
+          <Grid item md={6}>
+            <ImageDetails body={explanation} timestamp={date} title={title} />
+          </Grid>
+        </Grid>
+      </Card>
+    </Box>
   );
 }

@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  /* Footer size */
+  margin-bottom: 60px;
 }
 
 code {
