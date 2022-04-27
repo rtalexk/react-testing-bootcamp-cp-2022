@@ -11,7 +11,7 @@ export default function useNasaMedia(date) {
 
   useEffect(() => {
     fetchNasaMediaHandler();
-  });
+  }, []);
 
   return media;
 }
