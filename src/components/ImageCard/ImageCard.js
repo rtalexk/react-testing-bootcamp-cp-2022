@@ -4,6 +4,11 @@ import ImageDetails from '../ImageDetails';
 export default ImageCard;
 
 function ImageCard({ media }) {
+  // Loading
+  if (!media) {
+    return null;
+  }
+
   const {
     date,
     explanation,
