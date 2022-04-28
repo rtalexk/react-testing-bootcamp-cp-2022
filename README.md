@@ -70,3 +70,19 @@ The bonus is a plus that helps us know you better and increments your final scor
 ## Questions?
 
 If you have any questions about this challenge, feel free to ask on the Slack channel ASAP.
+
+# Project Setup
+
+Make a copy of the `.env.example` file to a new file named `.env.development`:
+
+```bash
+cp .env.example .env.development
+```
+
+Paste your NASA API Key.
+
+Run the project with
+
+```bash
+npm run
+```
