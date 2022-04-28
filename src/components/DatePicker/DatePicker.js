@@ -59,6 +59,7 @@ function DatePicker(props) {
             disableUnderline
             readOnly
             sx={{ width: '120px' }}
+            inputProps={{ style: { cursor: 'pointer' } }}
           />
           <CalendarMonth />
         </Box>
