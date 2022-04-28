@@ -8,9 +8,9 @@ export default ImageCardContainer;
 
 function ImageCardContainer() {
   const { date } = useContext(MediaDateContext);
-  const media = useNasaMedia(format(date, 'yyyy-MM-dd'));
+  const { error, media } = useNasaMedia(format(date, 'yyyy-MM-dd'));
 
   return (
-    <ImageCard media={media} />
+    <ImageCard media={media} error={error} />
   );
 }
