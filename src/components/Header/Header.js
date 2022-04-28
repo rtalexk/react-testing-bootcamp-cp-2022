@@ -1,6 +1,5 @@
-import React, { useCallback, useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { AppBar, Toolbar, Typography } from '@mui/material';
-import { format } from 'date-fns';
 import DatePicker from '../DatePicker';
 
 import { APP_NAME } from '../../constants';
