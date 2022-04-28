@@ -4,9 +4,13 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { MediaDateContextProvider } from './context/MediaDate';
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MediaDateContextProvider>
+      <App />
+    </MediaDateContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

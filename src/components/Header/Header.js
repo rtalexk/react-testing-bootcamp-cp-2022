@@ -1,17 +1,18 @@
 import 'react-day-picker/dist/style.css';
 import { DayPicker } from 'react-day-picker';
-import React, { useCallback, useRef, useState } from 'react';
+import React, { useCallback, useContext, useState } from 'react';
 import { AppBar, Box, Button, Input, InputLabel, Popover, Toolbar, Typography } from '@mui/material';
 import { CalendarMonth } from '@mui/icons-material';
 import { visuallyHidden } from '@mui/utils';
 import { format } from 'date-fns';
 
 import { APP_NAME } from '../../constants';
+import { MediaDateContext } from '../../context/MediaDate';
 
 export default Header;
 
 function Header() {
-  const [ date, setDate ] = useState(new Date());
+  const { date, setDate } = useContext(MediaDateContext);
   const [ isCalendarOpen, setCalendarOpen ] = useState(false);
   const [ popoverAnchorEl, setPopoverAnchorEl ] = useState(null);
 
