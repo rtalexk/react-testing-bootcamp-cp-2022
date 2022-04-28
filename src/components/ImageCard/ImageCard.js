@@ -4,12 +4,25 @@ import ImageDetails from '../ImageDetails';
 
 export default ImageCard;
 
-function ImageCard({ media }) {
-  // Loading
+function ImageCard({ error, media }) {
+  if (error) {
+    return (
+      <div>
+        <h6>
+          Error
+        </h6>
+
+        <p>
+          {error.msg}
+        </p>
+      </div>
+    );
+  }
+
   if (!media) {
     return null;
   }
-
+  
   const {
     date,
     explanation,
