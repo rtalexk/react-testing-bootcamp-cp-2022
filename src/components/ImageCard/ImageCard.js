@@ -1,4 +1,5 @@
-import { Box, Card, Grid } from '@mui/material';
+import { Box, Card, Grid, Typography } from '@mui/material';
+import { visuallyHidden } from '@mui/utils';
 import Image from '../Image';
 import ImageDetails from '../ImageDetails';
 
@@ -7,15 +8,15 @@ export default ImageCard;
 function ImageCard({ error, media }) {
   if (error) {
     return (
-      <div>
-        <h6>
+      <Box display="flex" mt={8} justifyContent="center">
+        <Typography sx={visuallyHidden} variant="h5">
           Error
-        </h6>
+        </Typography>
 
-        <p>
+        <Typography color="crimson" variant="h6" component="p">
           {error.msg}
-        </p>
-      </div>
+        </Typography>
+      </Box>
     );
   }
 
