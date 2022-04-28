@@ -1,13 +1,11 @@
 import React from 'react';
-import { LocalizationProvider } from '@mui/x-date-pickers';
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { render } from '@testing-library/react';
 
 function CustomProviders({ children }) {
   return (
-    <LocalizationProvider dateAdapter={AdapterDateFns}>
+    <>
       {children}
-    </LocalizationProvider>
+    </>
   );
 }
 
