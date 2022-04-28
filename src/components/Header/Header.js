@@ -11,8 +11,6 @@ import { APP_NAME } from '../../constants';
 export default Header;
 
 function Header() {
-  const inputRef = useRef(null);
-
   const [ date, setDate ] = useState(new Date());
   const [ isCalendarOpen, setCalendarOpen ] = useState(false);
   const [ popoverAnchorEl, setPopoverAnchorEl ] = useState(null);
