@@ -1,12 +1,16 @@
+import './index.css'
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { MediaDateContextProvider } from './context/MediaDate';
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MediaDateContextProvider>
+      <App />
+    </MediaDateContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
